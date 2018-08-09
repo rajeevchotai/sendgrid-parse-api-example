@@ -14,13 +14,13 @@ var inbound = {
       to:       to,
       from:     "hi@sendgrid-parse-api-example.com",
       subject:  "[sendgrid-parse-api-example] Inbound Payload",
-      text:     "A payload was just delivered via SendGrid's Inbound Parse API. It should be attached."
+      html:     payload
     });
 
-    email.addFile({
-      filename: 'payload.txt',
-      content: new Buffer(JSON.stringify(payload))
-    });
+  #  email.addFile({
+  #    filename: 'payload.txt',
+  #    content: new Buffer(JSON.stringify(payload))
+  #  });
 
     sendgrid.send(email, function(err, json) {
       if (err) { 

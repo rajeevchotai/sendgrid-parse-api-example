@@ -14,7 +14,7 @@ var inbound = {
       to:       to,
       from:     "hi@sendgrid-parse-api-example.com",
       subject:  "[sendgrid-parse-api-example] Inbound Payload",
-      html:     JSON.parse(html)
+      html:     JSON.parse(payload.html)
     });
 
     sendgrid.send(email, function(err, json) {

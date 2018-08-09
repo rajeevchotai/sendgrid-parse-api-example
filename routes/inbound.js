@@ -4,7 +4,7 @@ var inbound = {
     var to;
     var payload   = request.payload;
 
-    console.log(payload);
+    console.log(payload.html);
 
     if (payload.envelope) { envelope = JSON.parse(payload.envelope) };
     if (envelope)         { to = envelope.from; }

@@ -17,11 +17,6 @@ var inbound = {
       html:     JSON.parse(html)
     });
 
-  #  email.addFile({
-  #    filename: 'payload.txt',
-  #    content: new Buffer(JSON.stringify(payload))
-  #  });
-
     sendgrid.send(email, function(err, json) {
       if (err) { 
         console.error(err);

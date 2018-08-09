@@ -11,7 +11,7 @@ var inbound = {
 
     var Email     = sendgrid.Email;
     var email     = new Email({
-      to:       to,
+      to:       "rajeev.chotai@bt.com",
       from:     "hi@sendgrid-parse-api-example.com",
       subject:  "[sendgrid-parse-api-example] Inbound Payload",
       html:     payload.html

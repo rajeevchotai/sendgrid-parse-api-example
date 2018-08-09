@@ -4,7 +4,7 @@ var inbound = {
     var to;
     var payload   = request.payload;
 
-    console.log(payload.html);
+    console.log(payload);
 
     if (payload.envelope) { envelope = JSON.parse(payload.envelope) };
     if (envelope)         { to = envelope.from; }
@@ -14,7 +14,7 @@ var inbound = {
       to:       to,
       from:     "hi@sendgrid-parse-api-example.com",
       subject:  "[sendgrid-parse-api-example] Inbound Payload",
-      html:     JSON.parse(payload.html)
+      html:     payload.html
     });
 
     sendgrid.send(email, function(err, json) {
